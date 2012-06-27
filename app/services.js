@@ -1,13 +1,8 @@
 App.Services = (function(lng, app, undefined) {
 
-	var API_URL = "http://api.blibb.it/ipedrazas/bugglog";
+	var API_URL = "http://api.blibb.it/ipedrazas/bugalive";
 	var PARAMETERS = {
-		callback: '?'
-	};
-
-	function cleanup(){
-		lng.dom('#bug_description').val("");
-		lng.dom('#bug_title').val(""); 
+		callback: '?' // jsonp
 	};
 
 	var bug_service = function() {
@@ -29,12 +24,6 @@ App.Services = (function(lng, app, undefined) {
 		});
 	};
 
-	function refresh(){
-		bug_service();
-		critical_service();
-		enhancement_service();
-	};
-
 	var add_bug = function(){
 
 		// var post_params = {
@@ -54,6 +43,17 @@ App.Services = (function(lng, app, undefined) {
 			refresh();
 			cleanup();
 		});
+	};
+
+	function refresh(){
+		bug_service();
+		critical_service();
+		enhancement_service();
+	};
+
+	function cleanup(){
+		lng.dom('#bug_description').val("");
+		lng.dom('#bug_title').val(""); 
 	};
 	
 	return {

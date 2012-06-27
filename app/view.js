@@ -6,7 +6,6 @@ App.View = (function(lng, app, undefined) {
             template: 'bugs-tmp',
             data: bugs_data
         });
-        console.error(bugs_data.length);
         lng.View.Element.count('a[href="' + container + '"]', bugs_data.length);
     };
 
