@@ -7,7 +7,6 @@ App.Events = (function(lng, app, undefined) {
 
     lng.dom('#newEntry').tap(function(event) {    	
     	App.Services.add_bug();  
-
     	lng.Sugar.Growl.notify('Entry added', 'Tap to hide this notification.', 'check', 'success', 4);
     });
 

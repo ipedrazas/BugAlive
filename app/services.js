@@ -1,6 +1,6 @@
 App.Services = (function(lng, app, undefined) {
 
-	var API_URL = "http://api.devblibb.com/ipedrazas/bugglog";
+	var API_URL = "http://api.blibb.it/ipedrazas/bugglog";
 	var PARAMETERS = {
 		callback: '?'
 	};
@@ -57,10 +57,7 @@ App.Services = (function(lng, app, undefined) {
 	};
 	
 	return {
-		bug_service: bug_service,
-		critical_service: critical_service,
 		add_bug: add_bug,
-		enhancement_service: enhancement_service,
 		refresh: refresh
 	}
 
