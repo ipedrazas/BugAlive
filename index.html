@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Buglog</title>
+	<meta name="description" content="">
+	<meta name="author" content="Ivan Pedrazas (@ipedrazas)">
+	<!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta http-equiv="cleartype" content="on">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- For iPhone 4 with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/icon@2x.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/icon-72.png">
+	<link rel="apple-touch-icon-precomposed" href="assets/images/icon.png">
+	<link rel="apple-touch-startup-image" href="assets/images/default.png">
+	<!-- Main Stylesheet -->
+	<link rel="stylesheet" href="./lungo.js/lungo-2.0.min.css">
+	<link rel="stylesheet" href="./lungo.js/lungo.theme.default.css">
+	<link rel="stylesheet" href="./lungo.js/sugars/lungo.sugar.growl.min.css">
+	<link rel="stylesheet" href="assets/css/bugalive.css">
+</head>
+
+<body class="app">
+	<section id="main">
+		<header data-title="BugAlive"></header>
+
+		<article id="info" class="current indented">
+			<p>This is a little app. built with :blibb and lungo.js.</p>
+			<p>The main use is to log all the bugs found during the development of :blibb, if you find an error, 
+				bug or want to suggest a feature, do not doubt to get in contact with us or just log the bug.</p>
+			<div class="onright">:blibb 2012 </div>
+			<div class="logo"><img src="assets/images/g4188.png" /></div>
+		</article>
+
+		<article id="bugs-list" class="list scrollable"></article>
+		<article id="critical-list" class="list scrollable"></article>
+		<article id="enhancement-list" class="list scrollable"></article>
+		<article id="discarded-list" class="list scrollable"></article>
+
+		<article id="add_bug">
+            <p class="form">
+                <input type="text" name="title" id="bug_title" placeholder="Title"/>
+                <textarea name="bug" id="bug_description"placeholder="Bug description" rows="8"></textarea>
+                <select name="type" id="bug_type">
+                	<option>Bug</option>
+                	<option>Critical</option>
+                	<option>Enhancement<option>
+                </select>
+                <input type="text" placeholder="date" id="bug_date"/>
+                <a href="#" id="newEntry" data-icon="edit" class="onright button blue" >New Entry</a>
+            </p>
+        </article>
+
+         <footer class="toolbar with-labels">
+            <nav>
+                <a href="#aside-menu" class="current" data-target="aside" data-icon="items" data-label="Bugs"></a>
+                <a href="#add_bug" data-target="article" data-icon="edit" data-label="Add"></a>
+                <a href="#info" data-target="article" data-icon="info" data-label="Folder"></a>
+            </nav>
+        </footer>
+	</section>
+
+	<aside id="aside-menu">
+			<ul>
+				<li><a href="#info" data-target="article" data-icon="info">Info</a></li>
+				<li><a href="#bugs-list" data-target="article">Bug</a></li>
+				<li><a href="#critical-list" data-target="article">Critical</a></li>
+				<li><a href="#enhancement-list" data-target="article">Enhancement</a></li>
+				<li><a href="#discarded-list" data-target="article">Discarded</a></li>				
+			</ul>
+	</aside>
+
+	<!-- LungoJS (Production mode) -->
+	<script src="lungo.js/lungo-2.0.packed.js"></script>
+	<script src="lungo.js/sugars/lungo.sugar.growl.min.js"></script>
+	<!-- LungoJS - Sandbox App -->
+	<script src="app/app.js"></script>
+	<script src="app/events.js"></script>
+	<script src="app/services.js"></script>
+	<script src="app/view.js"></script>
+</body>
+</html>
