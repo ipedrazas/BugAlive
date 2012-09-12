@@ -30,7 +30,7 @@
 
 		<article id="info" class="current indented">
 			<p>This is a little app. built with :blibb and lungo.js.</p>
-			<p>The main use is to log all the bugs found during the development of :blibb, if you find an error, 
+			<p>The main use is to log all the bugs found during the development of :blibb, if you find an error,
 				bug or want to suggest a feature, do not doubt to get in contact with us or just log the bug.</p>
 			<p>If you're interested on looking at the code you can always view the source or pop in to github and check
 				our repo. There's a screencast as well with the "making of" of this app.</p>
@@ -52,6 +52,11 @@
                 	<option>Critical</option>
                 	<option>Enhancement<option>
                 </select>
+                <select name="type" id="bug_assign">
+                    <option>ipedrazas</option>
+                    <option>Valgreens</option>
+                    <option>/dev/null<option>
+                </select>
                 <input type="text" placeholder="date" id="bug_date"/>
                 <a href="#" id="newEntry" data-icon="edit" class="onright button blue" >New Entry</a>
             </p>
@@ -72,7 +77,7 @@
 				<li><a href="#bugs-list" data-target="article">Bug</a></li>
 				<li><a href="#critical-list" data-target="article">Critical</a></li>
 				<li><a href="#enhancement-list" data-target="article">Enhancement</a></li>
-				<li><a href="#discarded-list" data-target="article">Discarded</a></li>				
+				<li><a href="#discarded-list" data-target="article">Discarded</a></li>
 			</ul>
 	</aside>
 
